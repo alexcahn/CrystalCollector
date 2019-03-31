@@ -4,7 +4,7 @@ html{
 }
 
 .jumbotron{
-    background-image: url("/assets/images/jumbobcg.png");
+    background-image: url("../images/jumbobcg.png");
     background-size: cover;
 }
 
