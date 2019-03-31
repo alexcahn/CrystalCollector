@@ -1,5 +1,6 @@
 html{
     margin: 20px 100px;
+    background-color: bisque;
 }
 
 .jumbotron{
@@ -8,7 +9,7 @@ html{
 }
 
 .display-4{
-    color: gold;
+    color: floralwhite;
     font-weight: bold;
     text-align: center;
 }
@@ -16,14 +17,16 @@ html{
     background-color: lightcyan;
     text-align: center;
     font-size: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 167px;;
+    margin-right: 167px;
    
 }
+/* images - the diamond needs a smaller width */ 
 
 img{
     height: 200px;
     display: block;
+    padding-bottom: 20px;
 }
 
 #crystalThree{
@@ -31,18 +34,39 @@ img{
     margin-right: auto;
 }
 
+/* random number section */
+
+.scores{
+    padding: 50px;
+    text-align: center;
+}
+
 #randomNumber{
     background-color: aqua;
-    text-align: center;
     font-weight: bold;
     font-size: 200%;
     padding: 50px;
 }
 
-.col-3{
-    text-align: center;
+#randomEquals {
+    background-color: lightgray;
 }
 
-.scores{
+#yourScore{
+    background-color: rgb(174, 208, 243);
+    font-size: 200%;
     padding: 50px;
+    font-weight: bold;
+}
+
+#totalScore {
+    background-color: lightgray;
+}
+
+.winLosses {
+    background-color:rgb(118, 185, 118);
+    margin: 20px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 150%;
 }
