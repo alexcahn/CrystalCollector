@@ -40,18 +40,13 @@ $(document).ready(function(){
     crystalFour = Math.floor(Math.random() * 12 + 1);
     console.log(crystalFour);
 
-    // score wins and losses
-    $("#Wins").text("Wins");
-    $("#Losses").text("Losses");
 
     // start a new game
     function newGame(){
         randomNumber = Math.floor(Math.random() * 102 + 19);
         $("#randomNumber").text(randomNumber);
         crystalOne = Math.floor(Math.random() * 12 + 1);
-        $("#crystalOne").text(crystalOne);
         crystalTwo = Math.floor(Math.random() * 12 + 1);
-        $("#crystalTwo").text(crystalTwo);
         crystalThree = Math.floor(Math.random() * 12 + 1);
         $("#crystalThree").text(crystalThree);
         crystalFour = Math.floor(Math.random() * 12 + 1);
