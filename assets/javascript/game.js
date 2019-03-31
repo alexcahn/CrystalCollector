@@ -15,61 +15,102 @@
 // at the end of each game, you'll get a new random number, and each crystal will be worth a new amount
 
 // set variables that i may need
-var Wins = 0;
-var Losses = 0;
-var randomNumber = " ";
-var userTotal = 0;
-var crystalOne = " ";
-var crystalTwo = " ";
-var crystalThree = " ";
-var crystalFour = " ";
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     // generates random number to guess
-    randomNumber = Math.floor(Math.random() * 102 + 19);
+    var randomNumber = Math.floor(Math.random() * 102 + 19);
     console.log(randomNumber);
+    // display that number
+    $("#randomNumber").text(randomNumber)
 
     // generates random number for each crystal
-    crystalOne = Math.floor(Math.random() * 12 + 1);
-    console.log(crystalOne);
-    crystalTwo = Math.floor(Math.random() * 12 + 1);
-    console.log(crystalTwo);
-    crystalThree = Math.floor(Math.random() * 12 + 1);
-    console.log(crystalThree);
-    crystalFour = Math.floor(Math.random() * 12 + 1);
-    console.log(crystalFour);
+    var crystalOne = Math.floor(Math.random() * 12 + 1);
+    var crystalTwo = Math.floor(Math.random() * 12 + 1);
+    var crystalThree = Math.floor(Math.random() * 12 + 1);
+    var crystalFour = Math.floor(Math.random() * 12 + 1);
 
+    var Wins = 0;
+    var Losses = 0;
+    var userTotal = 0;
 
     // start a new game
-    function newGame(){
+    function newGame() {
         randomNumber = Math.floor(Math.random() * 102 + 19);
+        console.log(randomNumber);
         $("#randomNumber").text(randomNumber);
         crystalOne = Math.floor(Math.random() * 12 + 1);
+        console.log(crystalOne);
         crystalTwo = Math.floor(Math.random() * 12 + 1);
+        console.log(crystalTwo);
         crystalThree = Math.floor(Math.random() * 12 + 1);
-        $("#crystalThree").text(crystalThree);
-        crystalFour = Math.floor(Math.random() * 12 + 1);
-        $("#crystalFour").text(crystalFour);
+        console.log(crystalThree);
+        crystalFour = Math.floor(Math.random() * 12 + 1);;
+        console.log(crystalFour);
         userTotal = 0;
-        $("yourScore").text(userTotal);
-    }
+        $("#yourScore").text(userTotal);
+    };
 
     // display Wins
-    function userWin(){
+    function userWin() {
         alert("you win!");
         Wins++;
-        $("#Wins").text(Wins)
-        newGame()
+        $("#Wins").text("Wins: " + Wins)
+        newGame();
     }
 
     // display Losses
-    function userLoss(){
+    function userLoss() {
         alert("you lose, try again!");
         Losses++;
-        $("#Losses").text(Losses)
-        newGame()
-    }
+        $("#Losses").text("Losses: " +Losses)
+        newGame();
+    };
+
+    // clicks on the crystals
+    $("#crystalOne").on("click", function () {
+        userTotal = userTotal + crystalOne;
+        $("#yourScore").text(userTotal);
+
+        if (userTotal == randomNumber) {
+            userWin();
+        } else if (userTotal > randomNumber) {
+            userLoss();
+        }
+    })
+
+    $("#crystalTwo").on("click", function () {
+        userTotal = userTotal + crystalTwo;
+        $("#yourScore").text(userTotal);
+
+        if (userTotal == randomNumber) {
+            userWin();
+        } else if (userTotal > randomNumber) {
+            userLoss();
+        }
+    })
+
+    $("#crystalThree").on("click", function () {
+        userTotal = userTotal + crystalThree;
+        $("#yourScore").text(userTotal);
+
+        if (userTotal == randomNumber) {
+            userWin();
+        } else if (userTotal > randomNumber) {
+            userLoss();
+        }
+    })
+
+    $("#crystalFour").on("click", function () {
+        userTotal = userTotal + crystalFour;
+        $("#yourScore").text(userTotal);
+
+        if (userTotal == randomNumber) {
+            userWin();
+        } else if (userTotal > randomNumber) {
+            userLoss();
+        }
+    })
 
 
-})
+});

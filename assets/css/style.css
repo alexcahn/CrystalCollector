@@ -1,0 +1,48 @@
+html{
+    margin: 20px 100px;
+}
+
+.jumbotron{
+    background-image: url("/assets/images/jumbobcg.png");
+    background-size: cover;
+}
+
+.display-4{
+    color: gold;
+    font-weight: bold;
+    text-align: center;
+}
+.instructions{
+    background-color: lightcyan;
+    text-align: center;
+    font-size: 75%;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+img{
+    height: 200px;
+    display: block;
+}
+
+#crystalThree{
+    margin-left: 25px;
+    margin-right: auto;
+}
+
+#randomNumber{
+    background-color: aqua;
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    padding: 50px;
+}
+
+.col-3{
+    text-align: center;
+}
+
+.scores{
+    padding: 50px;
+}
