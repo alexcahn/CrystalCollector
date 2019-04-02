@@ -16,10 +16,11 @@ html{
 .instructions{
     background-color: lightcyan;
     text-align: center;
-    font-size: 75%;
+    font-size: 85%;
     margin-left: 167px;;
     margin-right: 167px;
-   
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 /* images - the diamond needs a smaller width */ 
 
@@ -27,6 +28,11 @@ img{
     height: 200px;
     display: block;
     padding-bottom: 20px;
+    cursor: pointer;
+}
+
+img:active{
+    transform: translateY(5px);
 }
 
 #crystalThree{
@@ -64,7 +70,7 @@ img{
 }
 
 .winLosses {
-    background-color:rgb(118, 185, 118);
+    background-color:rgba(24, 219, 24, 0.397);
     margin: 20px;
     padding: 10px;
     font-weight: bold;

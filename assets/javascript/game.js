@@ -18,7 +18,7 @@
 
 $(document).ready(function () {
 
-    // generates random number to guess
+    // define variable that generates random number to guess, sends that number to the random number text
     var randomNumber = Math.floor(Math.random() * 102 + 19);
     console.log(randomNumber);
     // display that number
@@ -26,10 +26,15 @@ $(document).ready(function () {
 
     // generates random number for each crystal
     var crystalOne = Math.floor(Math.random() * 12 + 1);
+    console.log(crystalOne);
     var crystalTwo = Math.floor(Math.random() * 12 + 1);
+    console.log(crystalTwo);
     var crystalThree = Math.floor(Math.random() * 12 + 1);
+    console.log(crystalThree);
     var crystalFour = Math.floor(Math.random() * 12 + 1);
+    console.log(crystalFour);
 
+    // define variables to log wins, losses, user's score
     var Wins = 0;
     var Losses = 0;
     var userTotal = 0;
@@ -50,6 +55,7 @@ $(document).ready(function () {
         userTotal = 0;
         $("#yourScore").text(userTotal);
     };
+    
 
     // display Wins
     function userWin() {
@@ -67,8 +73,9 @@ $(document).ready(function () {
         newGame();
     };
 
-    // clicks on the crystals
+    // clicks on the crystals, consolelogging user clicks so i have the data
     $("#crystalOne").on("click", function () {
+        console.log("user clicked crystal one: " + crystalOne);
         userTotal = userTotal + crystalOne;
         $("#yourScore").text(userTotal);
 
@@ -80,6 +87,7 @@ $(document).ready(function () {
     })
 
     $("#crystalTwo").on("click", function () {
+        console.log("user clicked crystal two: " + crystalTwo);
         userTotal = userTotal + crystalTwo;
         $("#yourScore").text(userTotal);
 
@@ -91,6 +99,7 @@ $(document).ready(function () {
     })
 
     $("#crystalThree").on("click", function () {
+        console.log("user clicked crystal three: " + crystalThree);
         userTotal = userTotal + crystalThree;
         $("#yourScore").text(userTotal);
 
@@ -102,6 +111,7 @@ $(document).ready(function () {
     })
 
     $("#crystalFour").on("click", function () {
+        console.log("user clicked crystal four: " + crystalFour);
         userTotal = userTotal + crystalFour;
         $("#yourScore").text(userTotal);
 
