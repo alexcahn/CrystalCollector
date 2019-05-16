@@ -1,4 +1,5 @@
-# unit-4-game
-homework assignment 4, jquery
+CrystalCollector Game!
 
-link to game - https://alexcahn.github.io/unit-4-game/
+Coded with - JQuery, Javascript
+
+Play here - https://alexcahn.github.io/unit-4-game/
