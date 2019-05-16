@@ -2,4 +2,4 @@ CrystalCollector Game!
 
 Coded with - JQuery, Javascript
 
-Play here - https://alexcahn.github.io/unit-4-game/
+Play here - https://alexcahn.github.io/CrystalCollector/
